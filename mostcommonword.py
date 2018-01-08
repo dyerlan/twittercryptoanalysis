@@ -24,3 +24,6 @@ regex_str = [
     r'(?:[\w_]+)', # other words
     r'(?:\S)' # anything else
 ]
+
+tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)
+emoticon_re = re.compile(r'^'+emoticons_str+'$', re.VERBOSE | re.IGNORECASE)
