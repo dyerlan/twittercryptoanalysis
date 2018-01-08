@@ -37,4 +37,13 @@ def preprocess(s, lowercase=False):
         tokens = [token if emoticon_re.search(token) else token.lower() for token in tokens]
     return tokens
 
+if __name__ == '__main__':
+    fname = sys.argv[1]
 
+    with open(fname, 'r') as f:
+        count_all = Counter()
+        for line in f:
+            tweet = json.loads(line)
+            tokens = preprocess(tweet['text'])
+            count_all.update(tokens)
+        print(count_all.most_common(5))
