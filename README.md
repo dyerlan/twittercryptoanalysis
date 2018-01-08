@@ -1,5 +1,5 @@
-# CorpusHashtagStatistics
-Generates statistics for the hashtag usage in text corpus.
+# HashtagStatistics
+Generates statistics for the hashtag usage in text.
 
 ## Preparations
 - Install Python 3.5
