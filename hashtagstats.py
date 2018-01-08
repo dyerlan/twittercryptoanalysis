@@ -10,3 +10,8 @@ def get_hashtags(tweet):
     return [tag['text'].lower() for tag in hashtags]
 
 
+def usage():
+    print("Usage:")
+    print("python {} <filename.jsonl>".format(sys.argv[0]))
+
+
